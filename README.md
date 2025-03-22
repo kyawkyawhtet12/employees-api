@@ -31,29 +31,32 @@ Before setting up the project, ensure you have the following installed:
     composer install
     ```
 
-3.
-4.  **Create a `.env` file:**
+3.  **Create a `.env` file:**
 
     ```
     cp .env.example .env
     ```
 
-5.  **Generate an application key:**
+4.  **Generate an application key:**
 
     ```
     php artisan key:generate
     ```
 
-6.  **Run migrations:**
+5.  **Run migrations:**
 
     ```
     php artisan migrate
     ```
 
-7.  **Seed the database:**
+6.  **Seed the database:**
     Run Seeder For User And Employee:
     ```
     php artisan db:seed
+    ```
+7.  **Create Passsport Clinet Token:**
+    ```
+    php artisan passport:client --personal
     ```
 
 ---
