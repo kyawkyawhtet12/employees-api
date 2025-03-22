@@ -54,7 +54,7 @@ Before setting up the project, ensure you have the following installed:
     ```
     php artisan db:seed
     ```
-7.  **Create Passsport Clinet Token:**
+7.  **Create Passsport Client Token:**
     ```
     php artisan passport:client --personal
     ```
