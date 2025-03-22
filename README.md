@@ -180,3 +180,12 @@ mutation {
 }
 
 ```
+
+#### Export an Employees
+
+```
+query{
+  exportEmployees
+}
+
+```
