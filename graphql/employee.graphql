@@ -1,0 +1,33 @@
+extend type Mutation {
+    createEmployee(
+        name: String!
+        email: String!
+        position: String!
+        salary: Float!
+    ): Employee @create
+
+    updateEmployee(
+        id: ID!
+        name: String
+        email: String
+        position: String
+        salary: Float
+    ): Employee @update
+
+    deleteEmployee(id: ID! @whereKey): Employee @delete
+}
+
+extend type Query {
+    employees: [Employee!]! @paginate
+    employee(id: ID! @eq): Employee @find
+    exportEmployees: String
+        @field(resolver: "App\\GraphQL\\Queries\\ExportEmployees")
+}
+
+type Employee {
+    id: ID!
+    name: String!
+    email: String!
+    position: String!
+    salary: Float!
+}
